@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Aula de Eventos DOM</title>
+     <style>
+          div#area {
+               background-color: greenyellow;
+               color: white;
+               width: 100%;
+               text-align: center;
+               height: 200px;
+               font: bold 2em Arial;
+               text-transform: uppercase;
+          }
+     </style>
+</head>
+<body>
+     <!-- <div id="area" onmouseenter="pass()" onmouseout="getout()" onclick="clicou()">
+          Esperando Ação
+     </div> -->
+
+     <div id="area">
+
+     </div>
+     <script>
+          // metodo 1
+
+          let area = document.getElementById('area')
+          // function pass() {
+          //      area.style.backgroundColor = 'blue'
+          //      area.innerText = 'dentro'
+          // }
+
+          // function getout() {
+          //      area.style.backgroundColor = 'greenyellow'
+          //      area.innerText= 'fora'
+          // }
+
+          // function clicou() {
+          //      area.innerText = 'clicou'
+          //      area.style.backgroundColor = 'black'
+          // }
+
+          // metodo 2
+
+          area.addEventListener('click', clicar)
+          area.addEventListener('mouseenter', entrou)
+          area.addEventListener('mouseout', sair)
+          area.addEventListener('dblclick', clicou2)
+
+          function entrou() {
+               area.style.backgroundColor = 'blue'
+               area.innerText = 'dentro'
+          }
+
+          function sair() {
+               area.style.backgroundColor = 'greenyellow'
+               area.innerText= 'fora'
+          }
+
+         
+          function clicar() {
+               area.innerText = 'clicou'
+               area.style.backgroundColor = 'black'
+          }
+          function clicou2() {
+               area.style.backgroundColor = 'red'
+          }
+     </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+    <h1 id="oi"></h1>
+    <h2></h2>
+
+    <script>
+        // variaveis
+        let texto = document.getElementById('oi')
+        let texto02 = document.getElementsByTagName('h2')[0]
+        let corpo = document.body
+        // texto do h1
+        texto.style.color = 'white'
+        texto.style.font = 'bold 2em Arial'
+        texto.style.textAlign = 'center'
+        texto.innerText = 'Ola, mundo'
+        // texto do h2
+        texto02.style.font = 'normal 1em Arial'
+        texto02.style.color = 'rgba(255, 255, 255, 0.5)'
+        texto02.innerText = 'Texto 2'
+        texto02.style.textAlign = 'center'
+        // corpo
+        corpo.style.textTransform = 'uppercase'
+        corpo.style.backgroundColor = 'rgb(10, 10, 20)'
+    </script>
+</body>
+</html>
